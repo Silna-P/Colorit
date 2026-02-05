@@ -1,0 +1,60 @@
+cd ~/frappe-bench/apps/colorit
+
+# Create the correct pyproject.toml
+cat > pyproject.toml << 'EOF'
+[project]
+name = "colorit"
+authors = [
+    { name = "Your Company", email = "your@email.com" }
+]
+description = "Custom Navbar Color and Help Menu Customization"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+# IMPORTANT: leave this empty
+dependencies = []
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# ✅ THIS IS WHAT FRAPPE CLOUD READS
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<16.0.0"
+
+[tool.bench.dev-dependencies]
+# dev-only deps if needed
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
+ignore = [
+    "B017",
+    "B018",
+    "B023",
+    "B904",
+    "E101",
+    "E402",
+    "E501",
+    "E741",
+    "F401",
+    "F403",
+    "F405",
+    "F722",
+    "W191",
+]
+typing-modules = ["frappe.types.DF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+docstring-code-format = true
+EOF
+
+# Push to GitHub
+git add pyproject.toml
+git commit -m "Add correct pyproject.toml for Frappe Cloud"
+git push

@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include colorit *.css
+recursive-include colorit *.csv
+recursive-include colorit *.html
+recursive-include colorit *.ico
+recursive-include colorit *.js
+recursive-include colorit *.json
+recursive-include colorit *.md
+recursive-include colorit *.png
+recursive-include colorit *.py
+recursive-include colorit *.svg
+recursive-include colorit *.txt
+recursive-exclude colorit *.pyc

@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2026-02-05 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "MariaDB",
+ "field_order": [
+  "navbar_customization_section",
+  "navbar_background_color",
+  "navbar_text_color",
+  "search_menu_text_color",
+  "column_break_1",
+  "hide_help_menu"
+ ],
+ "fields": [
+  {
+   "fieldname": "navbar_customization_section",
+   "fieldtype": "Section Break",
+   "label": "Navbar Customization"
+  },
+  {
+   "fieldname": "navbar_background_color",
+   "fieldtype": "Color",
+   "label": "Navbar Background Color",
+   "description": "Select the background color for the navbar"
+  },
+  {
+   "fieldname": "navbar_text_color",
+   "fieldtype": "Color",
+   "label": "Navbar Text Color",
+   "description": "Select the text color for navbar routes/links (not search input)"
+  },
+  {
+   "fieldname": "search_menu_text_color",
+   "fieldtype": "Color",
+   "label": "Search Menu Text Color",
+   "description": "Select the text color for search input and dropdown"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hide_help_menu",
+   "fieldtype": "Check",
+   "label": "Hide Help Menu",
+   "default": 0
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-02-05 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Colorit Settings",
+ "name": "Colorit Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

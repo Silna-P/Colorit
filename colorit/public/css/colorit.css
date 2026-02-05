@@ -1,0 +1,57 @@
+/**
+ * Colorit - Base CSS Support
+ * Base styles to ensure smooth application of customizations
+ */
+
+/* Ensure smooth color transitions for navbar elements */
+.navbar,
+.navbar.navbar-default,
+header.navbar,
+.navbar .navbar-nav > li > a,
+.navbar .nav > li > a,
+.navbar-nav > li > a,
+.navbar-search input,
+.navbar input[type="text"] {
+    transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease;
+}
+
+/* Ensure proper z-index for navbar */
+.navbar,
+header.navbar {
+    z-index: 1030;
+    position: relative;
+}
+
+/* Ensure search input styling is not overridden */
+.navbar .navbar-search input[type="text"],
+.navbar input#navbar-search,
+header.navbar input.form-control[type="text"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Placeholder styling base */
+.navbar input::placeholder,
+header.navbar input::placeholder {
+    opacity: 0.7;
+}
+
+/* Ensure dropdown menus have proper styling */
+.navbar .dropdown-menu,
+header.navbar .dropdown-menu {
+    z-index: 1031;
+}
+
+/* Base styling for awesomplete dropdown */
+.awesomplete > ul {
+    z-index: 1032;
+}
+
+/* Ensure icons render correctly */
+.navbar .navbar-nav > li > a .icon,
+.navbar .navbar-nav > li > a svg 
+{
+    display: inline-block;
+    vertical-align: middle;
+}
